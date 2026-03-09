@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ネクプロ 事業計画（Core / Why）</title>
+    <style>
+      :root {
+        --teal-900: #0f6f7d;
+        --teal-700: #1f93a4;
+        --teal-300: #a8d4dd;
+        --teal-100: #dceff3;
+        --ink-900: #1f2937;
+        --ink-700: #374151;
+        --bg: #f4f8fa;
+        --white: #ffffff;
+        --border: #7ea9b1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP",
+          sans-serif;
+        color: var(--ink-900);
+        background: var(--bg);
+        line-height: 1.55;
+      }
+
+      .page {
+        max-width: 1180px;
+        margin: 24px auto 40px;
+        padding: 0 16px;
+      }
+
+      .header {
+        margin-bottom: 16px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: clamp(22px, 2.2vw, 32px);
+        letter-spacing: 0.02em;
+      }
+
+      .header p {
+        margin: 8px 0 0;
+        color: var(--ink-700);
+      }
+
+      .board {
+        display: grid;
+        gap: 12px;
+      }
+
+      .layer {
+        display: grid;
+        grid-template-columns: 1fr 120px;
+        gap: 10px;
+        border: 2px solid var(--border);
+        background: var(--teal-100);
+        padding: 10px;
+      }
+
+      .layer.core {
+        background: linear-gradient(180deg, #2398a9 0%, #1f8f9f 100%);
+      }
+
+      .layer.why {
+        background: linear-gradient(180deg, #94c9d3 0%, #83bcc7 100%);
+      }
+
+      .boxes {
+        display: grid;
+        gap: 10px;
+      }
+
+      .core .boxes {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .label {
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.55);
+        color: #0b2530;
+        font-weight: 700;
+        font-size: 42px;
+        display: grid;
+        place-items: center;
+      }
+
+      .card {
+        background: var(--white);
+        border: 2px solid #9eb4bb;
+        min-height: 180px;
+        padding: 18px 16px;
+      }
+
+      .card h2,
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 30px;
+      }
+
+      .card p,
+      .card li {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .subgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .panel {
+        border: 2px solid #7d99a3;
+        background: rgba(255, 255, 255, 0.58);
+      }
+
+      .panel-head {
+        background: #25282f;
+        color: #fff;
+        padding: 10px 14px;
+        font-size: 38px;
+        font-weight: 700;
+      }
+
+      .panel-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .panel-cell {
+        border-top: 2px solid #8ea3aa;
+        border-right: 2px solid #8ea3aa;
+        padding: 14px;
+        background: #fff;
+        min-height: 220px;
+      }
+
+      .panel-cell:last-child {
+        border-right: none;
+      }
+
+      .panel-cell h3 {
+        margin: 0 0 8px;
+        font-size: 32px;
+      }
+
+      .panel-cell ul {
+        margin: 0;
+        padding-left: 1.2em;
+      }
+
+      .panel-cell li {
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+
+      .core .card h2,
+      .core .card p {
+        text-align: center;
+      }
+
+      @media (max-width: 1080px) {
+        .layer {
+          grid-template-columns: 1fr;
+        }
+
+        .label {
+          min-height: 88px;
+        }
+
+        .core .boxes,
+        .subgrid,
+        .panel-body {
+          grid-template-columns: 1fr;
+        }
+
+        .panel-cell {
+          border-right: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1>ネクプロ事業計画（Core / Why）</h1>
+        <p>
+          事業の向かう先を、誰にでも伝わる言葉で整理した1枚資料。
+          まずはCoreとWhyを明確化し、意思決定の土台をそろえる。
+        </p>
+      </header>
+
+      <section class="board" aria-label="CoreとWhyの構造">
+        <div class="layer core">
+          <div class="boxes">
+            <article class="card">
+              <h2>ビジョン</h2>
+              <p>企業と顧客の学び・信頼・意思決定を、もっとなめらかにする。</p>
+            </article>
+            <article class="card">
+              <h2>ミッション</h2>
+              <p>
+                成果につながる情報体験（ウェビナー/動画/接点設計）を、
+                誰でも継続運用できる仕組みにする。
+              </p>
+            </article>
+            <article class="card">
+              <h2>事業戦略</h2>
+              <p>
+                配信ツール提供から成果創出プラットフォームへ進化し、
+                商談化と顧客育成を一気通貫で支援する。
+              </p>
+            </article>
+          </div>
+          <div class="label" aria-label="Core">Core</div>
+        </div>
+
+        <div class="layer why">
+          <div class="subgrid">
+            <section class="panel">
+              <div class="panel-head">「誰を」「どんな状態にしたいか」</div>
+              <div class="panel-body">
+                <article class="panel-cell">
+                  <h3>ターゲットユーザー</h3>
+                  <ul>
+                    <li>マーケ責任者（リード育成KPI）</li>
+                    <li>IS責任者（商談化率KPI）</li>
+                    <li>事業部の現場担当（施策実行）</li>
+                  </ul>
+                </article>
+                <article class="panel-cell">
+                  <h3>ペイン・ゲイン</h3>
+                  <ul>
+                    <li>売上につながる施策設計が難しい</li>
+                    <li>部門間でデータが分断され追客が遅れる</li>
+                    <li>少人数でも再現性ある成果運用を実現したい</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head">なぜ自社がするのか</div>
+              <div class="panel-body">
+                <article class="panel-cell">
+                  <h3>市場分析</h3>
+                  <ul>
+                    <li>BtoB購買のオンライン化・長期化が進行</li>
+                    <li>単発集客より継続接点の設計が重要</li>
+                    <li>顧客育成を担う仕組み需要が拡大</li>
+                  </ul>
+                </article>
+                <article class="panel-cell">
+                  <h3>競合分析</h3>
+                  <ul>
+                    <li>単体ツールは多いが、成果設計の伴走が弱い</li>
+                    <li>ネクプロは運用知見を製品に反映しやすい</li>
+                    <li>部門連携まで含めた実行支援で差別化可能</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </div>
+          <div class="label" aria-label="Why">Why</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
